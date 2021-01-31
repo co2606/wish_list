@@ -1,6 +1,7 @@
 import { Component } from "react";
 import ListItem from "../components/ListItem.js";
 import ListHeader from "../components/ListHeader.js";
+import ListForm from "../components/ListForm";
 
 class List extends Component {
   state = {
@@ -11,13 +12,16 @@ class List extends Component {
 
   render() {
     return (
-      <div className="flow-root mt-4 ml-4 mr-4">
-        <ListHeader />
+      <div>
+       <ListForm />
+        <div className="flow-root mt-4 ml-4 mr-4">
+          <ListHeader />
 
-        <ul className="-my-2 ml-4 mr-4 divide-y divide-gray-200">
-          <li></li>
-          <ListItem />
-        </ul>
+          <ul className="-my-2 ml-4 mr-4 divide-y divide-gray-200">
+            <li></li>
+            <ListItem />
+          </ul>
+        </div>
       </div>
     );
   }
