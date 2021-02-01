@@ -7,17 +7,16 @@ class List extends Component {
   state = {
     message: "",
     title: "",
-    name: "",
-    url: "",
-    note: "",
+    name: [""],
+    url: [""],
+    note: [""],
     addItem: [0],
   };
 
   handleAddItem = () => {
     var addItem = this.state.addItem;
-    addItem.push(0)
+    addItem.push(0);
     this.setState({ addItem: addItem });
-
   };
 
   saveMessage = (value) => {
@@ -63,31 +62,31 @@ class List extends Component {
             this.handleAddItem();
           }}
           type="submit"
-          class="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           Add an Item
         </button>
 
-
         {this.state.addItem.map((x, i) => {
-                  return (
-                    <div key={i}>
-                  <ListForm
-                  onSaveName={(value) => {
-                    this.saveName(value);
-                  }}
-                  onSaveUrl={(value) => {
-                    this.saveUrl(value);
-                  }}
-                  onSaveNote={(value) => {
-                    this.saveNote(value);
-                  }}
-                  onCancel={() => {
-                    this.cancel();
-                  }}
-                />
-                </div>
-                  )
+          return (
+            <div key={i}>
+              <ListForm
+                onSaveName={(value) => {
+                  this.saveName(value);
+                  console.log(i)
+                }}
+                onSaveUrl={(value) => {
+                  this.saveUrl(value);
+                }}
+                onSaveNote={(value) => {
+                  this.saveNote(value);
+                }}
+                onCancel={() => {
+                  this.cancel();
+                }}
+              />
+            </div>
+          );
         })}
       </div>
     );

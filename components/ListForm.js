@@ -11,6 +11,7 @@ function ListForm(props) {
           saveButtonLabel="Save"
           cancelButtonLabel="Cancel"
           placeholder="Item Name"
+          hideDeleteButton={false}
           cancelButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           saveButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         />
@@ -23,6 +24,7 @@ function ListForm(props) {
           saveButtonLabel="Save"
           cancelButtonLabel="Cancel"
           placeholder="Item Url"
+          hideDeleteButton={false}
           cancelButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           saveButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         />
@@ -35,6 +37,7 @@ function ListForm(props) {
           saveButtonLabel="Save"
           cancelButtonLabel="Cancel"
           placeholder="Item Note"
+          hideDeleteButton={false}
           cancelButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           saveButtonStyle="ml-3 inline-flex justify-center py-.5 px-1 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         />
