@@ -16,6 +16,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-easy-edit": "^1.13.1",
+    "swr": "^0.4.2",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
