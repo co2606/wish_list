@@ -34,7 +34,7 @@ const ITEMURLS = [
 ]
 
 const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
-export const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
 const getRandomListItem = () => ({
   name: getRandomElement(ITEMNAMES),
@@ -47,7 +47,7 @@ const getRandomListItem = () => ({
 const getRandomList = () => ({
   name: getRandomElement(LISTNAMES),
   description: getRandomElement(LISTDESCRIPTIONS),
-  items: getRandomInt(10).map(getRandomListItem),
+  items: [...Array(getRandomInt(10)).keys()].map(getRandomListItem),
 })
 
 export default getRandomList;
