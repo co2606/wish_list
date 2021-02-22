@@ -1,12 +1,13 @@
 import axios from 'axios'
 import Link from "next/link";
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+import { getRandomInt, getRandomList } from './api/fixtures';
+
+const baseUrl = '/api/list/';
 
 const createList = () => {  
-  const url = `/api/list/${getRandomInt(999)}`
+  const visibleId = getRandomInt(999);
+  const url = baseUrl + visibleId;
   console.log(url);
   axios.post(url).then((res) => console.log(res.data))
 }
@@ -16,25 +17,22 @@ export default function Home() {
       <>
         <h3>create list</h3>
         <input type='text' placeholder='list id' />
-        <input type='text' placeholder='req body' />
         <button onClick={createList}>submit</button>
-        <br/><br/>
+        <br/><br/><br/><br/>
 
         <h3>update list</h3>
         <input type='text' placeholder='list id' />
-        <input type='text' placeholder='req body' />
         <button>submit</button>
-        <br/><br/>
+        <br/><br/><br/><br/>
 
         <h3>read list</h3>
         <input type='text' placeholder='list id' />
         <button>submit</button>
-        <br/><br/>
+        <br/><br/><br/><br/>
 
         <h3>delete list</h3>
         <input type='text' placeholder='list id' />
         <button>submit</button>
-        <br/><br/>
 
       </>
   )
